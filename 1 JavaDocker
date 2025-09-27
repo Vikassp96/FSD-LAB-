@@ -1,0 +1,16 @@
+FROM openjdk:21-jdk-slim
+
+WORKDIR /app
+
+COPY Sample.java .
+
+RUN javac Sample.java
+
+CMD ["java", "Sample"]
+
+
+public class Sample{
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
